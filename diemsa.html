@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIEMSA - Bienvenido</title>
+    <link rel="stylesheet" href="diemsa.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="fondo1.jpg" alt="Logo DIEMSA" class="logo">
+            <h1>DIEMSA</h1>
+            <nav>
+                <ul class="nav-links">
+                    <a href="inicio de sesion.html">
+                         <button class="neumorphism-button"><li> Inicio</li></button>
+                    </a>
+                    <li><a href="#Valores">Valores</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <center>
+    <h2>Bienvenido a DIEMSA</h2>
+    <p>Soluciones innovadoras para el desarrollo inmobiliaria.</p>
+    </center>
+    <section id="nosotros" class="info-section">
+        <h2>Sobre Nosotros</h2>
+       <centrado>
+<P>
+     Somos una empresa que se dedica a la fabricación de muebles para tiendas
+      departamentales y de exhibición utilizando la mejor calidad de 
+      materia prima para nuestros productos.
+    DIEMSA MR es una empresa mexicana con más de 25 años de experiencia, especializada
+     en el diseño, fabricación e instalación de mobiliario para comercios y negocios.
+     Ofrecen soluciones personalizadas, incluyendo exhibidores, gondolas y mostradores
+     para tiendas departamentales, hoteles y otros sectores. La empresa se enfoca en la calidad,
+     innovación y satisfacción del cliente, proporcionando servicios de valor añadido
+      como mantenimiento e instalación, además de un compromiso social con su comunidad. Incluyen
+      exhibidores, gondolas, mostradores y mobiliario para tiendas departamentales. 
+
+</P>
+</centrado>
+
+<center>
+<img src="imagen1.jpeg" alt="imagen"  width="1500" height="300">    
+</center>
+ <section id="Valores" class="info-section">
+<centrado><h2>Valores</h2></centrado>
+<CENTRADO>
+<p>
+Calidad:
+Se especializan en muebles de primera calidad, utilizando materiales 
+seleccionados para ofrecer la mejor experiencia de compra. 
+</p>
+<p>
+Innovación:
+Son una empresa dinámica e innovadora en procesos y tecnologías. 
+</p>
+<p>
+Experiencia:
+Cuentan con más de 25 años de experiencia en el mercado mexicano 
+de mobiliario de exhibición. 
+</p>
+<p>
+Compromiso social:
+Han mostrado contribuciones a proyectos comunitarios, como el apoyo 
+a la realización de pozos de agua potable. 
+</p>
+</CENTRADO>
+</section>
+<br>
+<center>
+<img src="imagen4.jpeg" alt="imagen"  width="1000" height="300">    
+</center
+        
+
+
+    <footer>
+         <p>&copy; 2025 DIEMSA. Todos los derechos reservados.</p>
+    </footer>
+
+ <section id="registro" class="info-section">
+    <h2>Registro</h2>
+    <p>Únete a nosotros y forma parte de la comunidad empresarial líder en tecnología.</p>
+    
+    <form class="form-registro" id="formulario">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <input type="password" name="contrasena" placeholder="Contraseña" required>
+        <button type="submit" class="btn">Registrarse</button>
+        <p id="mensaje" style="margin-top: 10px;"></p>
+    </form>
+</section>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbykctCXIg6uOuv46Jk-J8HVA7N_fyP0aI_KWhgGNocyrD_5O9o8lFLGmAZ_XjLQKuIb/exec'; // <- pega aquí tu URL
+  const form = document.getElementById('formulario');
+  const mensaje = document.getElementById('mensaje');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const datos = {
+      nombre: form.nombre.value,
+      correo: form.correo.value,
+      contrasena: form.contrasena.value
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(datos),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      mensaje.textContent = "✅ Registro exitoso.";
+      mensaje.style.color = "green";
+      form.reset();
+    })
+    .catch(error => {
+      mensaje.textContent = "❌ Error al enviar el formulario.";
+      mensaje.style.color = "red";
+      console.error('Error!', error.message);
+    });
+  });
+</script>
+
+</body>
+</html>

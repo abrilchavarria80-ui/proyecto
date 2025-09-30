@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Área de Pintura - DIEMSA</title>
+    <link rel="stylesheet" href="pintura.css">
+</head>
+<body>
+
+    <h2>Formulario - Área de Pintura de Metal | DIEMSA</h2>
+
+    <form id="formularioPintura">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="cliente">Nombre del Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required>
+
+        <label for="pieza">Tipo de Pieza:</label>
+        <input type="text" id="pieza" name="pieza" required>
+
+        <label for="material">Material:</label>
+        <input type="text" id="material" name="material" required>
+
+        <label for="tipoPintura">Tipo de Pintura:</label>
+        <select id="tipoPintura" name="tipoPintura" required>
+            <option value="">-- Selecciona --</option>
+            <option value="pintura líquida">Pintura Líquida</option>
+            <option value="pintura en polvo">Pintura en Polvo</option>
+            <option value="electrostática">Electrostática</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+
+        <label for="acabado">Tipo de Acabado:</label>
+        <select id="acabado" name="acabado" required>
+            <option value="">-- Selecciona --</option>
+            <option value="mate">Mate</option>
+            <option value="satinado">Satinado</option>
+            <option value="brillante">Brillante</option>
+        </select>
+
+        <label for="cantidad">Cantidad de Piezas:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+
+        <label for="operador">Nombre del Operador:</label>
+        <input type="text" id="operador" name="operador" required>
+
+        <button type="submit">Guardar Registro</button>
+    </form>
+
+    <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+        ✅ Registro guardado con éxito.
+    </div>
+
+    <script src="pintura.js"></script>
+</body>
+</html>

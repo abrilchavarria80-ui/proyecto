@@ -1,0 +1,41 @@
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario CEDIS </title>
+  <link rel="stylesheet" href="cedis.css" />
+</head>
+<body>
+
+  <div class="container">
+    
+    <h2>Formulario CEDIS</h2>
+
+    
+    <form action="https://docs.google.com/spreadsheets/d/e/2PACX-1vQf9hgleYfs07zpLoQSQSGCoOk_akQnLalQlk_31lczWCihnfkDoRog4n1RG5KGR9gjcI6dS3p75Nvb/pubhtml?gid=0&single=true" method="post">
+      <label for="destino">Destino</label>
+      <input type="text" id="destino" name="destino" placeholder="Ej. Monterrey, Nuevo León" required>
+
+      <label for="fecha">Fecha de salida del camión</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="empresa">Empresa o Domicilio de entrega</label>
+      <input type="text" id="empresa" name="empresa" placeholder="Ej. Coca-Cola FEMSA / Av. Revolución 123" required>
+
+      <label for="hora">Hora estimada de llegada</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="carga">Descripción de carga</label>
+      <textarea id="carga" name="carga" placeholder="Ej. 500 cajas de producto, pallets, etc." required></textarea>
+
+      <button type="submit">Enviar registro</button>
+    </form>
+
+    <div class="footer">
+      DIEMSA © 2025 - Área de CEDIS
+    </div>
+  </div>
+</body>
+</html>

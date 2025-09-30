@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px 40px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 40px;
+  height: 2px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.step.completed:not(:last-child)::after {
+  background-color: #4caf50;
+}
+
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.label {
+  font-size: 14px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.step.completed .icon,
+.step.completed .label {
+  color: #4caf50;
+}
+
+.step.active .icon,
+.step.active .label {
+  color: #ff9800;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.step:hover.active {
+  transform: scale(1.1);
+}
+
+button#nextBtn {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button#nextBtn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+button#nextBtn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .timeline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    width: 2px;
+    height: 40px;
+    background-color: #ccc;
+    transform: none;
+    right: auto;
+  }
+  .step.completed:not(:last-child)::after {
+    background-color: #4caf50;
+  }
+  .step {
+    margin-bottom: 50px;
+  }
+}

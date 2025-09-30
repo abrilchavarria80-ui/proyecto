@@ -1,0 +1,66 @@
+
+body {
+background-image: url("logo.jpg"); /* La imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el espacio */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene la imagen fija mientras el usuario se desplaza */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #0ee9e9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #2e2e2e;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004c99;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 13px;
+}

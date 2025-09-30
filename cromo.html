@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Área de Cromo - DIEMSA</title>
+    <link rel="stylesheet" href="cromo.css">
+</head>
+<body>
+
+    <h2>Formulario - Área de Cromo | DIEMSA</h2>
+
+    <form id="formularioCromo">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="cliente">Nombre del Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required>
+
+        <label for="pieza">Tipo de Pieza:</label>
+        <input type="text" id="pieza" name="pieza" required>
+
+        <label for="material">Material Base:</label>
+        <input type="text" id="material" name="material" required>
+
+        <label for="tipoCromo">Tipo de Cromado:</label>
+        <select id="tipoCromo" name="tipoCromo" required>
+            <option value="">-- Selecciona --</option>
+            <option value="duro">Cromo Duro</option>
+            <option value="decorativo">Cromo Decorativo</option>
+            <option value="otros">Otros</option>
+        </select>
+
+        <label for="espesor">Espesor Requerido (en micras):</label>
+        <input type="number" id="espesor" name="espesor" min="1" required>
+
+        <label for="cantidad">Cantidad de Piezas:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+
+        <label for="operador">Nombre del Operador:</label>
+        <input type="text" id="operador" name="operador" required>
+
+        <button type="submit">Guardar Registro</button>
+    </form>
+
+    <script src="cromo.js"></script>
+</body>
+</html>
